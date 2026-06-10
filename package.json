@@ -1,0 +1,120 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "stenobar",
+  "title": "Stenobar",
+  "description": "Search Stenobar recordings and thoughts, and drive recording, dictation, and capture from Raycast.",
+  "icon": "icon.png",
+  "author": "narrowstacks",
+  "categories": ["Productivity"],
+  "license": "MIT",
+  "platforms": ["macOS"],
+  "commands": [
+    {
+      "name": "search-recordings",
+      "title": "Search Recordings",
+      "subtitle": "Stenobar",
+      "description": "Browse, filter, and open Stenobar recordings.",
+      "mode": "view",
+      "keywords": ["steno", "recording", "audio", "transcript", "meeting"]
+    },
+    {
+      "name": "search-thoughts",
+      "title": "Search Thoughts",
+      "subtitle": "Stenobar",
+      "description": "Browse captured thoughts from the Stenobar inbox.",
+      "mode": "view",
+      "keywords": ["steno", "thought", "inbox", "capture", "task", "note"]
+    },
+    {
+      "name": "toggle-recording",
+      "title": "Toggle Recording",
+      "subtitle": "Stenobar",
+      "description": "Start a recording if idle, stop it if recording.",
+      "mode": "no-view"
+    },
+    {
+      "name": "start-recording",
+      "title": "Start Recording",
+      "subtitle": "Stenobar",
+      "description": "Start a recording (no-op if already recording).",
+      "mode": "no-view"
+    },
+    {
+      "name": "stop-recording",
+      "title": "Stop Recording",
+      "subtitle": "Stenobar",
+      "description": "Stop the current recording (no-op if idle).",
+      "mode": "no-view"
+    },
+    {
+      "name": "dictate",
+      "title": "Dictate",
+      "subtitle": "Stenobar",
+      "description": "Toggle the dictation HUD: transcribe and paste into the focused app.",
+      "mode": "no-view"
+    },
+    {
+      "name": "capture-thought",
+      "title": "Capture Thought",
+      "subtitle": "Stenobar",
+      "description": "Toggle a thought capture: transcribe, classify, and route.",
+      "mode": "no-view"
+    },
+    {
+      "name": "drop-marker",
+      "title": "Drop Marker",
+      "subtitle": "Stenobar",
+      "description": "Drop a marker in the in-progress recording (no-op when idle).",
+      "mode": "no-view"
+    },
+    {
+      "name": "open-library",
+      "title": "Open Library",
+      "subtitle": "Stenobar",
+      "description": "Open the Stenobar recordings library.",
+      "mode": "no-view"
+    },
+    {
+      "name": "open-thoughts-inbox",
+      "title": "Open Thoughts Inbox",
+      "subtitle": "Stenobar",
+      "description": "Open the Stenobar Thoughts inbox window.",
+      "mode": "no-view"
+    },
+    {
+      "name": "open-settings",
+      "title": "Open Settings",
+      "subtitle": "Stenobar",
+      "description": "Open Stenobar settings.",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "indexPath",
+      "title": "Index File",
+      "description": "Override the path to Stenobar's index.json. Leave empty to use the default location.",
+      "type": "file",
+      "required": false
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.0",
+    "@raycast/utils": "^2.2.5"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.1.1",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.12",
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
