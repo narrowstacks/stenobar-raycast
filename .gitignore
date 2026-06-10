@@ -16,3 +16,4 @@ raycast-env.d.ts
 # Local Claude / editor config
 .claude/settings.local.json
 CLAUDE.local.md
+.claude/skills/raycast/
